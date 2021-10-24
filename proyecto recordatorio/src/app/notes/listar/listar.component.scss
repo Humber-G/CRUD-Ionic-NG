@@ -1,0 +1,16 @@
+.cards-tareas {
+  width: 100%;
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  bottom: -15px;
+}
+.fechaVencimiento {
+  display: flex;
+  justify-content: flex-end;
+  bottom: -10px;
+  right: -10px;
+}

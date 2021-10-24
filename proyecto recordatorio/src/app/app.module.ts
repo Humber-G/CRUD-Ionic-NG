@@ -12,27 +12,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from 'src/services/users/User.service';
-import {  RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
 import { NotesModule } from './notes/notes.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [AppComponent,
-     LoginComponent, 
-     MainComponent, 
-     NoteComponent,
-     RegisterComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    MainComponent,
+    NoteComponent,
+    RegisterComponent,
+  ],
   entryComponents: [],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
+    BrowserModule,
+    IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     UserService,
-    RouterModule
+    RouterModule,
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

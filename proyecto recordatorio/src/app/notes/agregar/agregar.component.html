@@ -1,3 +1,92 @@
-<p>
-  agregar works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Agregar</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button routerLink="/notas"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="completa">
+    <ion-row class="completa ion-align-items-center">
+      <ion-col size="10" offset="1">
+        <ion-card>
+          <ion-card-content>
+            <!--Titulo Nota-->
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Titulo</ion-label>
+                  <ion-input
+                    spellcheck
+                    type="text"
+                    required
+                    [(ngModel)]="titulo"
+                    ngDefaultControl
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <!--Descripción Nota-->
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Descripción</ion-label>
+                  <ion-input
+                    spellcheck
+                    type="text"
+                    [(ngModel)]="descripcion"
+                    ngDefaultControl
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <!--Fecha Vencimiento Nota-->
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Fecha Vencimiento</ion-label>
+                  <ion-input
+                    type="date"
+                    [(ngModel)]="fechaVencimiento"
+                    ngDefaultControl
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <!--Estado Nota
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Estado</ion-label>
+                  <ion-select placeholder="Seleccionar Un Estado">
+                    <ion-select-option value="ACTIVO">ACTIVO</ion-select-option>
+                    <ion-select-option value="VENCIDA"
+                      >VENCIDA</ion-select-option
+                    >
+                    <ion-select-option value="CUMPLIDA"
+                      >CUMPLIDA</ion-select-option
+                    >
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            -->
+            <!--Boton-->
+            <ion-row>
+              <ion-col>
+                <ion-button expand="block" (click)="crearNota()"
+                  >Crear Nota</ion-button
+                >
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
